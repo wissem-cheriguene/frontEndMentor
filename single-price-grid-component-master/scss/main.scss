@@ -1,0 +1,196 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700
+*/
+
+// Variable
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+//Layout
+$mb-width: 375px;
+$lg-width: 1440px;
+
+//Colors
+$primary-color-cyan: hsl(179, 62%, 43%);
+$primary-color-bright-yellow: hsl(71, 73%, 54%);
+
+$neutral-light-gray: hsl(204, 43%, 93%);
+$neutral-grayish-blue: hsl(218, 22%, 67%);
+
+//Typo
+$font-size: 16px;
+$font-family: 'Karla', sans-serif;
+
+// General
+
+body {
+  font-family: $font-family;
+  background-color: $neutral-light-gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+* {
+  font-size: $font-size;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+p {
+  color: white;
+  line-height: 1.6;
+}
+
+.container {
+  width: 300px;
+}
+
+.grid {
+  overflow: hidden;
+  box-shadow: 3px 2px 30px #98a6bd;
+  border-radius: 5px;
+}
+
+.card {
+  padding: 1.2em;
+}
+
+// Titles
+
+.title-1 {
+  color: $primary-color-cyan;
+  font-size: 1.5rem;
+  margin-bottom: 0.75em;
+}
+
+.title-2 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.75em;
+}
+
+// Grid components
+
+.item-1 {
+  background-color: white;
+  // border-top-right-radius: 5px;
+  // border-top-left-radius: 5px;
+  p {
+    color: $neutral-grayish-blue;
+    span {
+      display: inline-block;
+      color: $primary-color-bright-yellow;
+      margin-bottom: 0.75em;
+    }
+  }
+}
+
+.item-2 {
+  background-color: $primary-color-cyan;
+  .first-line {
+    color: white;
+    strong {
+      font-size: 2em;
+    }
+    position: relative;
+    &::after {
+      content: 'per month';
+      color: #e5eff5;
+      position: absolute;
+      margin: 0.7em 0.5em;
+      opacity: 0.6;
+    }
+  }
+  .second-line {
+    color: white;
+  }
+  .btn-sign-up {
+    display: inline-block;
+    margin-top: 1.2em;
+    width: 100%;
+    text-align: center;
+    border-radius: 0.3em;
+    padding: 1em 0;
+    font-weight: 700;
+    background-color: $primary-color-bright-yellow;
+
+    &:hover {
+      background-color: darken($primary-color-bright-yellow, 20%);
+    }
+  }
+}
+
+.item-3 {
+  // border-bottom-right-radius: 5px;
+  // border-bottom-left-radius: 5px;
+  background-color: lighten($primary-color-cyan, 5%);
+  p {
+    width: 70%;
+    font-size: 0.9rem;
+  }
+}
+
+// Media query
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 600px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'row1 row1'
+      'col1 col2';
+  }
+
+  .item-1 {
+    grid-area: row1;
+  }
+  .item-2 {
+    grid-area: col1;
+    border-bottom-left-radius: 5px;
+  }
+  .item-3 {
+    grid-area: col2;
+    border-bottom-left-radius: 0;
+  }
+}

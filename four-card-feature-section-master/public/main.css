@@ -1,0 +1,123 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Fonts
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #fafafa; }
+
+* {
+  box-sizing: border-box;
+  font-size: 15px; }
+
+main {
+  width: 90%;
+  margin: auto; }
+
+h1 {
+  color: #4c4e61; }
+
+.reliable {
+  margin: auto;
+  max-width: 300px;
+  text-align: center;
+  margin-bottom: 3em; }
+  .reliable h1 span {
+    font-weight: 200;
+    font-size: 1.4em; }
+  .reliable h1 strong {
+    font-size: 1.4em;
+    color: #4c4e61; }
+  .reliable p {
+    color: #a3a5ae; }
+
+.card {
+  margin: auto;
+  max-width: 300px;
+  padding: 1em;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  margin-bottom: 2rem;
+  box-shadow: 3px 12px 19px #a3a5ae; }
+  .card:nth-of-type(1) {
+    border-top: 3px solid #45d3d3; }
+  .card:nth-of-type(2) {
+    border-top: 3px solid #ea5353; }
+  .card:nth-of-type(3) {
+    border-top: 3px solid #fcaf4a; }
+  .card:nth-of-type(4) {
+    border-top: 3px solid #549ef2; }
+  .card p {
+    font-size: 0.9em;
+    color: #a3a5ae; }
+  .card .icon {
+    display: flex;
+    flex-direction: row-reverse; }
+
+footer {
+  text-align: center; }
+
+@media screen and (min-width: 1200px) {
+  * {
+    font-size: 18px; }
+  .reliable {
+    max-width: 50%; }
+  .card {
+    margin: 0; }
+  .grid {
+    width: 1024px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'supervisor team-builder calculator' '   .           karma         .';
+    grid-gap: 1.8rem;
+    justify-items: center; }
+  .supervisor {
+    grid-area: supervisor;
+    transform: translateY(calc(50% + 2em)); }
+  .team-builder {
+    grid-area: team-builder; }
+  .karma {
+    grid-area: karma; }
+  .calculator {
+    grid-area: calculator;
+    transform: translateY(calc(50% + 2em)); } }

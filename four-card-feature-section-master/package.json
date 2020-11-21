@@ -1,0 +1,22 @@
+{
+  "name": "four-card-feature-section-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o public/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wiss69/four-card-feature-section.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wiss69/four-card-feature-section/issues"
+  },
+  "homepage": "https://github.com/Wiss69/four-card-feature-section#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

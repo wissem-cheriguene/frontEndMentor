@@ -1,0 +1,135 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700
+*/
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+body {
+  font-family: "Karla", sans-serif;
+  background-color: #e5eff5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+* {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+p {
+  color: white;
+  line-height: 1.6; }
+
+.container {
+  width: 300px; }
+
+.grid {
+  overflow: hidden;
+  box-shadow: 3px 2px 30px #98a6bd;
+  border-radius: 5px; }
+
+.card {
+  padding: 1.2em; }
+
+.title-1 {
+  color: #2ab2af;
+  font-size: 1.5rem;
+  margin-bottom: 0.75em; }
+
+.title-2 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.75em; }
+
+.item-1 {
+  background-color: white; }
+  .item-1 p {
+    color: #98a6bd; }
+    .item-1 p span {
+      display: inline-block;
+      color: #c0df34;
+      margin-bottom: 0.75em; }
+
+.item-2 {
+  background-color: #2ab2af; }
+  .item-2 .first-line {
+    color: white;
+    position: relative; }
+    .item-2 .first-line strong {
+      font-size: 2em; }
+    .item-2 .first-line::after {
+      content: 'per month';
+      color: #e5eff5;
+      position: absolute;
+      margin: 0.7em 0.5em;
+      opacity: 0.6; }
+  .item-2 .second-line {
+    color: white; }
+  .item-2 .btn-sign-up {
+    display: inline-block;
+    margin-top: 1.2em;
+    width: 100%;
+    text-align: center;
+    border-radius: 0.3em;
+    padding: 1em 0;
+    font-weight: 700;
+    background-color: #c0df34; }
+    .item-2 .btn-sign-up:hover {
+      background-color: #7f9617; }
+
+.item-3 {
+  background-color: #2fc6c4; }
+  .item-3 p {
+    width: 70%;
+    font-size: 0.9rem; }
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 600px; }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'row1 row1' 'col1 col2'; }
+  .item-1 {
+    grid-area: row1; }
+  .item-2 {
+    grid-area: col1;
+    border-bottom-left-radius: 5px; }
+  .item-3 {
+    grid-area: col2;
+    border-bottom-left-radius: 0; } }
